@@ -51,6 +51,14 @@ java_setup(){
     mv target/shipping-1.0.jar shipping.jar &>>$LOG_FILE
     VALIDATE $? "Renaming the artifact"
 }
+
+python_setup(){
+    dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+    VALIDATE $? "Installing Python3"
+    pip3 install -r requirements.txt &>>$LOG_FILE
+    VALIDATE $? "Installing Dependencies"
+}
+
 app_setup(){
 
     id roboshop &>>$LOG_FILE
