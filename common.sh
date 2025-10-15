@@ -11,6 +11,7 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 START_TIME=$(date +%s)
 SCRIPT_DIR=$PWD
 MONGODB_HOST=mongodb.daws86.uno
+MYSQL_HOST=mysql.daws86.uno
 
 mkdir -p $LOGS_FOLDER
 echo "Script started executed at: $(date)" | tee -a $LOG_FILE
